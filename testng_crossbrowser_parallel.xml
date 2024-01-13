@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Cross Browser-Parallel Testing" parallel="methods" thread-count="2">
+    <test name="Test On Chrome">
+        <parameter name="Browser" value="chrome"/>
+        <parameter name="Version" value="121.0"/>
+        <parameter name="Platform" value="Windows 10"/>
+        <classes>
+            <class name="seleniumE2E.CreateNewProfile"/>
+            <class name="seleniumE2E.AddToCart_Checkout"/>
+            <class name="seleniumE2E.PickCategoryAndSortItems_Checkout"/>
+            <class name="seleniumE2E.CompareTwoComponents_AddToCart"/>
+        </classes>
+    </test>
+
+    <test name="Test On Edge">
+        <parameter name="Browser" value="edge"/>
+        <parameter name="Version" value="121.0"/>
+        <parameter name="Platform" value="Windows 10"/>
+        <classes>
+            <class name="seleniumE2E.CreateNewProfile"/>
+            <class name="seleniumE2E.AddToCart_Checkout"/>
+            <class name="seleniumE2E.PickCategoryAndSortItems_Checkout"/>
+            <class name="seleniumE2E.CompareTwoComponents_AddToCart"/>
+        </classes>
+    </test>
+
+<!--    <test name="Test On Firefox">-->
+<!--        <parameter name="Browser" value="firefox"/>-->
+<!--        <parameter name="Version" value="121.0"/>-->
+<!--        <parameter name="Platform" value="Windows 10"/>-->
+<!--        <classes>-->
+<!--            <class name="seleniumE2E.CreateNewProfile"/>-->
+<!--            <class name="seleniumE2E.AddToCart_Checkout"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
